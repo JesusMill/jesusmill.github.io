@@ -1,0 +1,432 @@
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css";
+
+@font-face {
+  font-family: 'keks';
+  src:  url('keks.ttf')  format('truetype');
+}
+
+body {
+  font-family: keks, sans-serif;
+  margin: 0;
+  overflow: hidden;
+}
+
+.bg {
+  position: absolute;
+  width: 100%;
+  filter: blur(5px) grayscale(95%);
+  -webkit-filter: blur(5px) grayscale(95%);
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.outer {
+  padding-top: 1px;
+  display: block;
+  margin: auto;
+  width: 300px;
+  height: 200px;
+  font-family: keks;
+  letter-spacing: 1px;
+}
+
+.hovereffect {
+  width: 100%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
+}
+
+.hovereffect .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+
+.hovereffect img {
+  display: block;
+  position: relative;
+  -webkit-transform: scale(1.);
+  transform: scale(1.1);
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+
+.hovereffect:hover img {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="0.7" /><feFuncG type="linear" slope="0.7" /><feFuncB type="linear" slope="0.7" /></feComponentTransfer></filter></svg>#filter');
+  filter: brightness(0.7);
+  -webkit-filter: brightness(0.7);
+}
+
+.hovereffect h2 {
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  font-size: 50px;
+  padding: 10px;
+  width: 100%;
+  font-weight: 100;
+}
+
+.hovereffect:hover h2 {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transform: translate3d(-50%, -50%, 0) scale3d(0.8, 0.8, 1);
+  transform: translate3d(-50%, -50%, 0) scale3d(0.8, 0.8, 1);
+}
+
+.hovereffect a.info {
+  display: inline-block;
+  text-decoration: none;
+  padding: 7px 14px;
+  text-transform: uppercase;
+  color: #fff;
+  border: 1px solid #fff;
+  margin: 50px 0 0 0;
+  background-color: transparent;
+}
+
+.hovereffect a.info:hover {
+  box-shadow: 0 0 5px #fff;
+}
+
+.hovereffect .rotate {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.hovereffect hr {
+  width: 50%;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.hovereffect hr:nth-child(2) {
+  -webkit-transform: translate3d(-50%, -50%, 0) rotate(0deg) scale3d(0, 0, 1);
+  transform: translate3d(-50%, -50%, 0) rotate(0deg) scale3d(0, 0, 1);
+}
+
+.hovereffect hr:nth-child(3) {
+  -webkit-transform: translate3d(-50%, -50%, 0) rotate(90deg) scale3d(0, 0, 1);
+  transform: translate3d(-50%, -50%, 0) rotate(90deg) scale3d(0, 0, 1);
+}
+
+.hovereffect h2,
+.hovereffect hr {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  background-color: transparent;
+  margin: 0px;
+}
+
+.group1,
+.group2 {
+  left: 50%;
+  position: absolute;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  background-color: transparent;
+  margin: 0px;
+  padding: 0px;
+}
+
+.group1 {
+  top: 40%;
+}
+
+.group2 {
+  top: 62%;
+}
+
+.hovereffect p {
+  width: 30%;
+  text-transform: none;
+  font-size: 15px;
+  line-height: 2;
+}
+
+.hovereffect p a {
+  color: #fff;
+}
+
+.hovereffect p a:hover,
+.hovereffect p a:focus {
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+}
+
+.hovereffect a i {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.group1 a:first-child i {
+  -webkit-transform: translate3d(-60px, -60px, 0) rotate(45deg) scale(2);
+  transform: translate3d(-60px, -60px, 0) rotate(45deg) scale(2);
+}
+
+.group1 a:nth-child(2) i {
+  -webkit-transform: translate3d(60px, -60px, 0) rotate(45deg) scale(2);
+  transform: translate3d(60px, -60px, 0) rotate(45deg) scale(2);
+}
+
+.group2 a:first-child i {
+  -webkit-transform: translate3d(-60px, 60px, 0) rotate(45deg) scale(2);
+  transform: translate3d(-60px, 60px, 0) rotate(45deg) scale(2);
+}
+
+.group2 a:nth-child(2) i {
+  -webkit-transform: translate3d(60px, 60px, 0) rotate(45deg) scale(2);
+  transform: translate3d(60px, 60px, 0) rotate(45deg) scale(2);
+}
+
+.hovereffect:hover hr:nth-child(2) {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transform: translate3d(-50%, -50%, 0) rotate(0deg) scale3d(1, 1, 1);
+  transform: translate3d(-50%, -50%, 0) rotate(0deg) scale3d(1, 1, 1);
+}
+
+.hovereffect:hover hr:nth-child(3) {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transform: translate3d(-50%, -50%, 0) rotate(90deg) scale3d(1, 1, 1);
+  transform: translate3d(-50%, -50%, 0) rotate(90deg) scale3d(1, 1, 1);
+}
+
+.hovereffect:hover .group1 i:empty,
+.hovereffect:hover .group2 i:empty {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0) rotate(45deg) scale(1);
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+
+
+#bgvid{
+        position: fixed;
+        top:50%;
+        left:50%;
+        min-width:100%;
+        min-height:100%;
+        width:1366;
+        height:768;
+        z-index: -100;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+transform: translateX(-50%) translateY(-50%);
+background: url(v2.css.html) no-repeat;
+background-size: cover;
+}
+
+.wrapper {
+    /* position: absolute; */
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+}
+
+.title {
+    font-size: 2em;
+    position: relative;
+    margin: 0 auto 1em;
+    padding: 1em 1em .25em 1em;
+    text-align: center;
+    text-transform: uppercase;
+}
+.title:after {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 240px;
+    height: 4px;
+    margin-left: -120px;
+    content: '';
+    background-color: #fff;
+}
+
+/* Clip text element */
+.clip-text {
+    font-size: 12em;
+    font-weight: bold;
+    line-height: 1;
+    position: relative;
+    display: inline-block;
+    margin: .25em;
+    padding: .5em .75em;
+    text-align: center;
+    /* Color fallback */
+    color: #fff;
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+.clip-text:before,
+.clip-text:after {
+    position: absolute;
+    content: '';
+}
+
+/* Background */
+.clip-text:before {
+    z-index: -2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: inherit;
+}
+
+/* Text Background (black zone) */
+.clip-text:after {
+    position: absolute;
+    z-index: -1;
+    top: .125em;
+    right: .125em;
+    bottom: .125em;
+    left: .125em;
+    background-color: #000;
+}
+
+/* Change the background position to display letter when the black zone isn't here */
+.clip-text--no-textzone:before {
+    background-position: -.25em 0;
+}
+
+.clip-text--no-textzone:after {
+    content: none;
+}
+
+/* Use Background-size cover for photo background and no-repeat background */
+.clip-text--cover,
+.clip-text--cover:before {
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+            background-size: cover;
+}
+
+/* Background image from http://thepatternlibrary.com/ and http://lorempixel.com */
+.clip-text_one {
+    background-image: url(http://i.ytimg.com/vi/fskQpofUquk/maxresdefault.jpg);
+}
+
+.clip-text_two {
+    background-image: url(http://i.imgur.com/KCa8KHY.png);
+}
+
+.clip-text_tree {
+    background-image: url(http://i.imgur.com/IuijDCu.png);
+}
+
+.clip-text_four {
+    background-image: url(http://i.imgur.com/tkKlzYz.jpg);
+}
+
+.clip-text_five {
+    background-image: url(http://i.imgur.com/4NiBrXs.gif);
+}
+
+.clip-text_six {
+    background-image: url(http://i.imgur.com/d2awmPs.jpg);
+}
+
+.clip-text_seven {
+    background-image: url(http://i.imgur.com/OzExPUf.png);
+}
+
+.clip-text_eight {
+    background-image: url(http://i.imgur.com/BFlh0FX.jpg);
+}
+
+.clip-text_nine {
+    background-image: url(http://i.imgur.com/2Nrxex6.jpg);
+}
+
+.clip-text_ten {
+    background-image: url(http://i.imgur.com/hCrSRTN.png);
+}
+
+.clip-text_eleven {
+    background-image: url(http://lorempixel.com/480/200/fashion/10/cc);
+    background-size: cover;
+}
+
+.clip-text_twelve {
+    background-image: url(http://lorempixel.com/480/200/people/7/cc);
+}
+
+.clip-text_thirteen {
+    background-image: url(http://lorempixel.com/480/200/food/5/cc);
+}
+
+.clip-text_fourteen {
+    background-image: url(http://lorempixel.com/480/200/city/9/cc);
+}
+
+.clip-text_fifteen {
+    background-image: url(http://i.imgur.com/kqvmLut.jpg);
+}
+
+
+
+
+
+
+
+$('*').css('background','black')
+ha()
+function ha(){
+var i=0, interval = setInterval(function(){
+	$('pre').append(array[i++] + array[i++] + array[i++] + array[i++] + array[i++] + array[i++] + array[i++] + array[i++] + array[i++])
+	if(i>len) i=0
+},10)
+}
+setInterval(function(){ $('body').animate({scrollTop: 100000000000000000});})
+
+
+
+var array = 'jQuery.each({\n\tmouseenter: \"mouseover\",\n\tmouseleave: \"mouseout\",\n\tpointerenter: \"pointerover\",\n\tpointerleave: \"pointerout\"\n}, function( orig, fix ) {\n\tjQuery.event.special[ orig ] = {\n\t\tdelegateType: fix,\n\t\tbindType: fix,\n\n\t\thandle: function( event ) {\n\t\t\tvar ret,\n\tttarget = this,\n\ttrelated = event.relatedTarget,\n\tthandleObj = event.handleObj;\n\n\t\t\t// For mousenter/leave call the handler if related is outside the target.\n\t\t\t// NB: No relatedTarget if the mouse left/entered the browser window\n\t\t\tif ( !related || (related !== target && !jQuery.contains( target, related )) ) {\n\ttevent.type = handleObj.origType;\n\ttret = handleObj.handler.apply( this, arguments );\n\ttevent.type = fix;\n\t\t\t}\n\t\t\treturn ret;\n\t\t}\n\t};\n});\n\n// IE submit delegation\nif ( !support.submitBubbles ) {\n\n\tjQuery.event.special.submit = {\n\t\tsetup: function() {\n\t\t\t// Only need this for delegated form submit events\n\t\t\tif ( jQuery.nodeName( this, \"form\" ) ) {\n\ttreturn false;\n\t\t\t}\n\n\t\t\t// Lazy-add a submit handler when a descendant form may potentially be submitted\n\t\t\tjQuery.event.add( this, \"click._submit keypress._submit\", function( e ) {\n\tt// Node name check avoids a VML-related crash in IE (#9807)\n\ttvar elem = e.target,\n\tt\tform = jQuery.nodeName( elem, \"input\" ) || jQuery.nodeName( elem, \"button\" ) ? elem.form : undefined;\n\ttif ( form && !jQuery._data( form, \"submitBubbles\" ) ) {\n\tt\tjQuery.event.add( form, \"submit._submit\", function( event ) {\n\tt\t\tevent._submit_bubble = true;\n\tt\t});\n\tt\tjQuery._data( form, \"submitBubbles\", true );\n\tt}\n\t\t\t});\n\t\t\t// return undefined since we don\'t need an event listener\n\t\t},\n\n\t\tpostDispatch: function( event ) {\n\t\t\t// If form was submitted by the user, bubble the event up the tree\n\t\t\tif ( event._submit_bubble ) {\n\ttdelete event._submit_bubble;\n\ttif ( this.parentNode && !event.isTrigger ) {\n\tt\tjQuery.event.simulate( \"submit\", this.parentNode, event, true );\n\tt}\n\t\t\t}\n\t\t},\n\n\t\tteardown: function() {\n\t\t\t// Only need this for delegated form submit events\n\t\t\tif ( jQuery.nodeName( this, \"form\" ) ) {\n\ttreturn false;\n\t\t\t}\n\n\t\t\t// Remove delegated handlers; cleanData eventually reaps submit handlers attached above\n\t\t\tjQuery.event.remove( this, \"._submit\" );\n\t\t}\n\t};\n}\n\n// IE change delegation and checkbox/radio fix\nif ( !support.changeBubbles ) {\n\n\tjQuery.event.special.change = {\n\n\t\tsetup: function() {\n\n\t\t\tif ( rformElems.test( this.nodeName ) ) {\n\tt// IE doesn\'t fire change on a check/radio until blur; trigger it on click\n\tt// after a propertychange. Eat the blur-change in special.change.handle.\n\tt// This still fires onchange a second time for check/radio after blur.\n\ttif ( this.type === \"checkbox\" || this.type === \"radio\" ) {\n\tt\tjQuery.event.add( this, \"propertychange._change\", function( event ) {\n\tt\t\tif ( event.originalEvent.propertyName === \"checked\" ) {\n\tt\t\t\tthis._just_changed = true;\n\tt\t\t}\n\tt\t});\n\tt\tjQuery.event.add( this, \"click._change\", function( event ) {\n\tt\t\tif ( this._just_changed && !event.isTrigger ) {\n\tt\t\t\tthis._just_changed = false;\n\tt\t\t}\n\tt\t\t// Allow triggered, simulated change events (#11500)\n\tt\t\tjQuery.event.simulate( \"change\", this, event, true );\n\tt\t});\n\tt}\n\ttreturn false;\n\t\t\t}\n\t\t\t// Delegated event; lazy-add a change handler on descendant inputs\n\t\t\tjQuery.event.add( this, \"beforeactivate._change\", function( e ) {\n\ttvar elem = e.target;\n\n\ttif ( rformElems.test( elem.nodeName ) && !jQuery._data( elem, \"changeBubbles\" ) ) {\n\tt\tjQuery.event.add( elem, \"change._change\", function( event ) {\n\tt\t\tif ( this.parentNode && !event.isSimulated && !event.isTrigger ) {\n\tt\t\t\tjQuery.event.simulate( \"change\", this.parentNode, event, true );\n\tt\t\t}\n\tt\t});\n\tt\tjQuery._data( elem, \"changeBubbles\", true );\n\tt}\n\t\t\t});\n\t\t},\n\n\t\thandle: function( event ) {\n\t\t\tvar elem = event.target;\n\n\t\t\t// Swallow native change events from checkbox/radio, we already triggered them above\n\t\t\tif ( this !== elem || event.isSimulated || event.isTrigger || (elem.type !== \"radio\" && elem.type !== \"checkbox\") ) {\n\ttreturn event.handleObj.handler.apply( this, arguments );\n\t\t\t}\n\t\t},\n\n\t\tteardown: function() {\n\t\t\tjQuery.event.remove( this, \"._change\" );\n\n\t\t\treturn !rformElems.test( this.nodeName );\n\t\t}\n\t};\n}\n\n// Create \"bubbling\" focus and blur events\nif ( !support.focusinBubbles ) {\n\tjQuery.each({ focus: \"focusin\", blur: \"focusout\" }, function( orig, fix ) {\n\n\t\t// Attach a single capturing handler on the document while someone wants focusin/focusout\n\t\tvar handler = function( event ) {\n\ttjQuery.event.simulate( fix, event.target, jQuery.event.fix( event ), true );\n\t\t\t};\n\n\t\tjQuery.event.special[ fix ] = {\n\t\t\tsetup: function() {\n\ttvar doc = this.ownerDocument || this,\n\tt\tattaches = jQuery._data( doc, fix );\n\n\ttif ( !attaches ) {\n\tt\tdoc.addEventListener( orig, handler, true );\n\tt}\n\ttjQuery._data( doc, fix, ( attaches || 0 ) + 1 );\n\t\t\t},\n\t\t\tteardown: function() {\n\ttvar doc = this.ownerDocument || this,\n\tt\tattaches = jQuery._data( doc, fix ) - 1;\n\n\ttif ( !attaches ) {\n\tt\tdoc.removeEventListener( orig, handler, true );\n\tt\tjQuery._removeData( doc, fix );\n\tt} else {\n\tt\tjQuery._data( doc, fix, attaches );\n\tt}\n\t\t\t}\n\t\t};\n\t});\n}\n\njQuery.fn.extend({\n\n\ton: function( types, selector, data, fn, /*INTERNAL*/ one ) {\n\t\tvar type, origFn;\n\n\t\t// Types can be a map of types/handlers\n\t\tif ( typeof types === \"object\" ) {\n\t\t\t// ( types-Object, selector, data )\n\t\t\tif ( typeof selector !== \"string\" ) {\n\tt// ( types-Object, data )\n\ttdata = data || selector;\n\ttselector = undefined;\n\t\t\t}\n\t\t\tfor ( type in types ) {\n\ttthis.on( type, selector, data, types[ type ], one );\n\t\t\t}\n\t\t\treturn this;\n\t\t}\n\n\t\tif ( data == null && fn == null ) {\n\t\t\t// ( types, fn )\n\t\t\tfn = selector;\n\t\t\tdata = selector = undefined;\n\t\t} else if ( fn == null ) {\n\t\t\tif ( typeof selector === \"string\" ) {\n\tt// ( types, selector, fn )\n\ttfn = data;\n\ttdata = undefined;\n\t\t\t} else {\n\tt// ( types, data, fn )\n\ttfn = data;\n\ttdata = selector;\n\ttselector = undefined;\n\t\t\t}\n\t\t}\n\t\tif ( fn === false ) {\n\t\t\tfn = returnFalse;\n\t\t} else if ( !fn ) {\n\t\t\treturn this;\n\t\t}\n\n\t\tif ( one === 1 ) {\n\t\t\torigFn = fn;\n\t\t\tfn = function( event ) {\n\tt// Can use an empty set, since event contains the info\n\ttjQuery().off( event );\n\ttreturn origFn.apply( this, arguments );\n\t\t\t};\n\t\t\t// Use same guid so caller can remove using origFn\n\t\t\tfn.guid = origFn.guid || ( origFn.guid = jQuery.guid++ );\n\t\t}\n\t\treturn this.each( function() {\n\t\t\tjQuery.event.add( this, types, fn, data, selector );\n\t\t});\n\t},\n\tone: function( types, selector, data, fn ) {\n\t\treturn this.on( types, selector, data, fn, 1 );\n\t},\n\toff: function( types, selector, fn ) {\n\t\tvar handleObj, type;\n\t\tif ( types && types.preventDefault && types.handleObj ) {\n\t\t\t// ( event )  dispatched jQuery.Event\n\t\t\thandleObj = types.handleObj;\n\t\t\tjQuery( types.delegateTarget ).off(\n\tthandleObj.namespace ? handleObj.origType + \".\" + handleObj.namespace : handleObj.origType,\n\tthandleObj.selector,\n\tthandleObj.handler\n\t\t\t);\n\t\t\treturn this;\n\t\t}\n\t\tif ( typeof types === \"object\" ) {\n\t\t\t// ( types-object [, selector] )\n\t\t\tfor ( type in types ) {\n\ttthis.off( type, selector, types[ type ] );\n\t\t\t}\n\t\t\treturn this;\n\t\t}\n\t\tif ( selector === false || typeof selector === \"function\" ) {\n\t\t\t// ( types [, fn] )\n\t\t\tfn = selector;\n\t\t\tselector = undefined;\n\t\t}\n\t\tif ( fn === false ) {\n\t\t\tfn = returnFalse;\n\t\t}\n\t\treturn this.each(function() {\n\t\t\tjQuery.event.remove( this, types, fn, selector );\n\t\t});\n\t},\n\n\ttrigger: function( type, data ) {\n\t\treturn this.each(function() {\n\t\t\tjQuery.event.trigger( type, data, this );\n\t\t});\n\t},\n\ttriggerHandler: function( type, data ) {\n\t\tvar elem = this[0];\n\t\tif ( elem ) {\n\t\t\treturn jQuery.event.trigger( type, data, elem, true );\n\t\t}\n\t}\n});\n\n\nfunction createSafeFragment( document ) {\n\tvar list = nodeNames.split( \"|\" ),\n\t\tsafeFrag = document.createDocumentFragment();\n\n\tif ( safeFrag.createElement ) {\n\t\twhile ( list.length ) {\n\t\t\tsafeFrag.createElement(\n\ttlist.pop()\n\t\t\t);\n\t\t}\n\t}\n\treturn safeFrag;\n}\n\nvar nodeNames = \"abbr|article|aside|audio|bdi|canvas|data|datalist|details|figcaption|figure|footer|\" +\n\t\t\"header|hgroup|mark|meter|nav|output|progress|section|summary|time|video\",\n\trinlinejQuery = / jQuery\d+=\"(?:null|\d+)\"/g,\n\trnoshimcache = new RegExp(\"<(?:\" + nodeNames + \")[\\s/>]\", \"i\"),\n\trleadingWhitespace = /^\s+/,\n\trxhtmlTag = /<(?!area|br|col|embed|hr|img|input|link|meta|param)(([\w:]+)[^>]*)\/>/gi,\n\trtagName = /<([\w:]+)/,\n\trtbody = /<tbody/i,\n\trhtml = /<|&#?\w+;/,\n\trnoInnerhtml = /<(?:script|style|link)/i,\n\t// checked=\"checked\" or checked\n\trchecked = /checked\s*(?:[^=]|=\s*.checked.)/i,\n\trscriptType = /^$|\/(?:java|ecma)script/i,\n\trscriptTypeMasked = /^true\/(.*)/,\n\trcleanScript = /^\s*<!(?:\[CDATA\[|--)|(?:\]\]|--)>\s*$/g,\n\n\t// We have to close these tags to support XHTML (#13200)\n\twrapMap = {\n\t\toption: [ 1, \"<select multiple=\'multiple\'>\", \"</select>\" ],\n\t\tlegend: [ 1, \"<fieldset>\", \"</fieldset>\" ],\n\t\tarea: [ 1, \"<map>\", \"</map>\" ],\n\t\tparam: [ 1, \"<object>\", \"</object>\" ],\n\t\tthead: [ 1, \"<table>\", \"</table>\" ],\n\t\ttr: [ 2, \"<table><tbody>\", \"</tbody></table>\" ],\n\t\tcol: [ 2, \"<table><tbody></tbody><colgroup>\", \"</colgroup></table>\" ],\n\t\ttd: [ 3, \"<table><tbody><tr>\", \"</tr></tbody></table>\" ],\n\n\t\t// IE6-8 can\'t serialize link, script, style, or any html5 (NoScope) tags,\n\t\t// unless wrapped in a div with non-breaking characters i '
+var len = array.length
+
+

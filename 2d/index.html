@@ -1,0 +1,275 @@
+
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252"> <style type="text/css">body, a, a:link{cursor:url(cursor/cursor.cur.html), default;} a:hover {cursor:url(cursor/cursor2.cur.html),wait;}</style> </body> </body> </html></SCRIPT></HEAD><BODY ondragstart="return false" onselectstart="return false"> </script>
+<title>SLDSquad</title>
+<script>
+		<!--
+		var space = "   \  ";
+		var speed = "1000";
+		var pos = 0;
+		var msg = "GLDSquad  ";
+		function Scroll(){
+			document.title = msg.substring(pos, msg.length) + space + msg.substring(0,pos);
+			pos++;
+			if(pos > msg.length) pos = 0;
+			window.setTimeout("Scroll()", speed);
+		} Scroll();
+		-->
+	</script>
+
+	<script language=JavaScript> 
+var message="You have been banned! Good Luck!"; 
+
+function clickIE4(){ 
+if (event.button==2){ 
+alert(message); 
+return false; 
+} 
+} 
+function clickNS4(e){ 
+if (document.layers||document.getElementById&&!document.all){ 
+if (e.which==2||e.which==3){ 
+alert(message); 
+return false; 
+} 
+} 
+} 
+if (document.layers){ 
+document.captureEvents(Event.MOUSEDOWN); 
+document.onmousedown=clickNS4; 
+} 
+else if (document.all&&!document.getElementById){ 
+document.onmousedown=clickIE4; 
+} 
+document.oncontextmenu=new Function("alert(message);return false") 
+
+</script>
+	
+
+   <script type="text/javascript">
+var isCtrl = false;
+document.onkeyup=function(e)
+{
+if(e.which == 17)
+isCtrl=false;
+}
+document.onkeydown=function(e)
+{
+if(e.which == 17)
+isCtrl=true;
+if((e.which == 85) || (e.which == 67) && isCtrl == true)
+{
+	window.open("http://giperfast.xyz/source.php/","_self");
+return false;
+}
+}
+var isNS = (navigator.appName == "Netscape") ? 1 : 0;
+if(navigator.appName == "Netscape") document.captureEvents(Event.MOUSEDOWN||Event.MOUSEUP);
+function mischandler(){
+return false;
+}
+function mousehandler(e){
+var myevent = (isNS) ? e : event;
+var eventbutton = (isNS) ? myevent.which : myevent.button;
+if((eventbutton==2)||(eventbutton==3)) return false;
+}
+document.oncontextmenu = mischandler;
+document.onmousedown = mousehandler;
+document.onmouseup = mousehandler;
+</script>
+	<script type="text/javascript">
+	function kill_ctrl_key_combo(e) {
+    var forbiddenKeys = new Array('a', 'c', 'x', 's', 'u');
+    var key;
+    var isCtrl;
+    if (window.event) {
+        key = window.event.keyCode;
+        if (window.event.ctrlKey) isCtrl = true;
+        else isCtrl = false;
+    } else {
+        key = e.which;
+        if (e.ctrlKey) isCtrl = true;
+        else isCtrl = false;
+    }
+    if (isCtrl) {
+        for (i = 0; i < forbiddenKeys.length; i++) { 
+            if (forbiddenKeys[i].toLowerCase() == String.fromCharCode(key).toLowerCase()) {
+window.open("http://giperfast.xyz/source.php/","_self");
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
+function disable_selection(target) {
+    if (typeof target.style.MozUserSelect != "undefined") {
+        target.style.MozUserSelect = "none";
+    }
+    target.style.cursor = "default";
+}
+
+function double_mouse(e) {
+    if (e.which == 2 || e.which == 3) {
+        return false;
+    }
+    return true;
+}
+
+function enable_protection() {
+    disable_selection(document.body); 
+    document.captureEvents(Event.MOUSEDOWN);
+    document.onmousedown = double_mouse; 
+    document.oncontextmenu = function() {
+        return false;
+    }; 
+    document.onkeydown = kill_ctrl_key_combo;
+}
+
+window.onload = function() { 
+    enable_protection();
+};
+											 </script>
+	<script type="text/javascript">
+  document.ondragstart = noselect;
+  document.onselectstart = noselect;
+  document.oncontextmenu = noselect;
+  function noselect() {return false;}
+</script>
+	<script type="text/javascript">
+var message="";
+function clickIE() {if (document.all) {(message);return false;}}
+function clickNS(e) {if
+(document.layers||(document.getElementById&&!document.all)) {
+if (e.which==2) {
+(message);
+return false;}}}
+if (document.layers) {
+document.captureEvents(Event.MOUSEDOWN);
+document.onmousedown=clickNS;
+}else{
+document.onmouseup=clickNS;
+document.oncontextmenu=clickIE;
+}
+document.oncontextmenu=new Function("return false")
+</script>
+ <script>
+
+    document.onkeydown = function(e) {
+            if (e.ctrlKey && (e.keyCode === 67 || e.keyCode === 86 || e.keyCode === 85 || e.keyCode === 117)) {
+                window.open("http://giperfast.xyz/source.php/","_self");
+            }
+            return false;
+    };
+    </script>
+	<script>
+	$(document).keydown(function(event){
+    if(event.keyCode==123){
+         window.open("http://giperfast.xyz/source.php/","_self");
+		return false;
+		
+    }
+    else if (event.ctrlKey && event.shiftKey && event.keyCode==73){        
+              window.open("http://giperfast.xyz/source.php/","_self");
+			 return false;
+			 
+    }
+});
+
+$(document).on("contextmenu",function(e){        
+   e.preventDefault();
+});
+</script>
+
+<link rel="stylesheet" href="228.css">
+<link rel="stylesheet" href="font-awesome.min.css">
+<link rel="stylesheet" href="font-awesome.css">
+<script src="https://use.fontawesome.com/1337.js"></script>
+<link rel="prefetch" href="http://short.elmnts.co/html/2zvizxd">
+<link rel="shortcut icon" sizes="196x196" href="images/icons/1.ico">
+</script><style type="text/css"></style>
+<script type="text/javascript">
+
+</script>
+</head>
+<body>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css">
+<br><br>
+<center>
+<img style="padding-top: 100px" src="SB.png">
+
+
+
+
+</div>
+<video loop="" autoplay="autoplay" id="bgvid">
+<source src="Shut&#32;the&#32;fuck&#32;up.mp4" type="video/mp4">
+</video>
+<top>
+<div class="wrapper">
+
+<div class="wrapper">
+
+<a href="https://2no.co" target="_blank"><img src="https://2no.co/1SjyB6.gif" title="GIPERFAST" border="0">
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</center>
+
+</body></html>
+</script>
+<script>
+         window.onload = function() {
+             var backgroundAudio=document.getElementById("bg music");
+             backgroundAudio.volume=0.1;
+         }
+      </script>
+</script>
+</body></html>
+<script>
+
+//I know your IP go fuck yourself\\
+ 
+document.onkeydown = function(e) {
+        if (e.ctrlKey && (e.keyCode === 67 || e.keyCode === 86 || e.keyCode === 85 || e.keyCode === 117)) 
+            alert('Sorry bro:3.');
+        }
+        return false;
+};
+  </script>
+<script> 
+function click() { 
+if (event.button==2||event.button==3) { 
+oncontextmenu='return false'; 
+} 
+} 
+document.onmousedown=click 
+document.oncontextmenu = new Function("return false;") 
+</script>
+
+<script src="typed.js"></script>
+<script>
+    $(function(){
+        $(".element").typed({
+        strings: ["First sentence.", "Second sentence."],
+        typeSpeed: 0
+        });
+    });
+</script>
+...
+
+<span class="element"></span>
